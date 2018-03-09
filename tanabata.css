@@ -421,17 +421,11 @@ body {
     bottom: 0;
     left: -1.2%;
 }
-#lightL:hover {
-    animation: pulse 2s linear infinite;
-}
 #lightR {
     position: absolute;
     height: 73%;
     bottom: 0;
     right: -2%;
-}
-#lightR:hover {
-    animation: pulse 2s linear infinite;
 }
 #stairs {
     position: absolute;
