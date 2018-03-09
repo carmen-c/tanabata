@@ -114,8 +114,6 @@ document.getElementById("smallBamboo").addEventListener("click", function() {
         addProgress();
         fact1 = true;
     } 
-    
-     
 });
 
 document.getElementById("singer").addEventListener("click", function() {
@@ -216,7 +214,6 @@ document.getElementById("lightL").addEventListener("click", function() {
 
 document.getElementById("lightR").addEventListener("click", function() {
     document.getElementById("lastPage").style.filter = "none";
-    
 });
 
 document.getElementById("gate").addEventListener("click", function() {
