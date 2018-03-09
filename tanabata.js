@@ -99,6 +99,7 @@ function pNotify () {
 }
 
 /*===============FACTS===============*/
+
 var exitFact = function() {
     facts.style.display = "none";
 }
@@ -208,63 +209,31 @@ document.getElementById("tanzaku").addEventListener("click", function() {
 });
 
 /*===============SHRINE===============*/
-var interaction1 = false,
-    interaction2 = false,
-    interaction3 = false,
-    tracker = 0;
 
 document.getElementById("lightL").addEventListener("click", function() {
     document.getElementById("lastPage").style.filter = "none";
-    if(interaction1 == false) {
-        interactAll();
-        interaction1 = true;
-    } 
 });
 
 document.getElementById("lightR").addEventListener("click", function() {
     document.getElementById("lastPage").style.filter = "none";
-        if(interaction1 == false) {
-        interactAll();
-        interaction1 = true;
-    } 
+    
 });
 
 document.getElementById("gate").addEventListener("click", function() {
-    document.getElementById("desc").style.display = "block";
-        if(interaction2 == false) {
-        interactAll();
-        interaction2 = true;
-    } 
+    facts.style.display = "flex";
+    factsTitle.innerText = "Happy Tanabata";
+    factsText.innerText = "The shrine associated with the Tanabata legend is Kifune Shrine, found in the northernmost part of Kyoto city. It is said that not only the Water God, but also the God of Marriage are enshrined there, and as a result, Kifune Shrine has visitors coming to pray all through the year. May your wishes come true!";
+    facts.removeEventListener("click", exitFact);
 });
 
 document.getElementById("baL").addEventListener("click", function() {
     createCharm("left");
-    if(interaction3 == false) {
-        interactAll();
-        interaction3 = true;
-    } 
 });
 
 document.getElementById("baR").addEventListener("click", function() {
     createCharm("right");
-    if(interaction3 == false) {
-        interactAll();
-        interaction3 = true;
-    } 
 });
 
-function interactAll() {
-    tracker++;
-   
-    if(tracker >= 3){
-        setTimeout(function() {
-            facts.style.display = "flex";
-            factsTitle.innerText = "Happy Tanabata";
-            factsText.innerText = "May your wishes come true!";
-            facts.removeEventListener("click", exitFact);
-        },3000);
-    }
-}
 function createCharm(which) {
     var smallCharm = document.createElement("img");
     var rHue = Math.round(Math.random()*350);
@@ -276,7 +245,7 @@ function createCharm(which) {
     smallCharm.style.width = "20px";
     smallCharm.style.top = rTop +"%";
     smallCharm.style.filter = "hue-rotate(" +rHue+ "deg)";
-    smallCharm.style.zIndex = 5;
+    smallCharm.style.zIndex = 3;
     smallCharm.style.position = "absolute";
     
     if(which == "left"){

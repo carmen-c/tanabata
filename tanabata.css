@@ -30,14 +30,14 @@ body {
     background-color: rgba(255,255,255,0.5);
     justify-content: center;
     text-align: center;
-    z-index: 2;
+    z-index: 4;
 }
 #factTitle {
     position: absolute;
     top: 30%;
     font-family: 'Oswald', sans-serif;
     font-size: 4em;
-    z-index: 2;
+    z-index: 4;
 }
 #factText {
     position: absolute;
@@ -383,14 +383,6 @@ body {
     background-color: rgba(19,31,48,1);
     justify-content: center;
     filter: brightness(0.4);
-}
-#desc {
-    position: absolute;
-    display: none;
-    left: 30%;
-    width: 30%;
-    font-family: 'Quattrocento Sans', sans-serif;
-    color: white;
 }
 #mountain {
     position: absolute;
